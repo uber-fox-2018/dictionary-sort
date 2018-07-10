@@ -3,7 +3,7 @@
 //Bubble Sort//
 function arrOfWord(arr) {
     let str = ''
-    for (let i = arr.length - 1; i >= 0; i--) {
+    for (let i = 0; i < arr.length; i++) {
         // for (let j = i; j >= 0; j--) {
         if (arr[i] > arr[i + 1]) {
             let temp = arr[i];
