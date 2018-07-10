@@ -6,7 +6,7 @@ const dictionarySort = (input) => {
       input[i+1] = swap
     }
   }
-  return input
+  return input.join(', ')
 }
 
 console.log(dictionarySort(['makan', 'duduk', 'tidur', 'terbang']));
