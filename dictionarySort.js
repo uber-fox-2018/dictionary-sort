@@ -1,14 +1,13 @@
 function dictionarySorted(words) {
 
-    for (let i = 0; i < words.length; i++) {
-        for (let j = 0; j < words.length-1; j++) {
-            if (words[j] > words[j+1]) {
-                let temp = words[j]
-                words[j] = words[j+1]
-                words[j+1] = temp
-            }
+    for (let i = 0; i < words.length-1; i++) {
+        if (words[i] > words[i+1]) {
+            let temp = words[i]
+            words[i] = words[i+1]
+            words[i+1] = temp
         }
     }
+   
     return words.join(',')
 }
 
