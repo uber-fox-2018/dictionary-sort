@@ -20,19 +20,17 @@
 // }
 
 function arrOfWord(items) {
-    var length = items.length;
-
-    for (var i = 0; i < length; i++) { //Number of passes
-      for (var j = 0; j < (length - i - 1); j++) { //Notice that j < (length - i)
+                                              //Number of passes
+      for (var i = 0; i < items.length-1; i++) { //Notice that j < (length - i)
+        // console.log('items[i] ==>',items[i])
         //Compare the adjacent positions
-        if(items[j] > items[j+1]) {
+        if(items[i] > items[i+1]) {
           //Swap the numbers
-          var tmp = items[j];  //Temporary variable to hold the current number
-          items[j] = items[j+1]; //Replace current number with adjacent number
-          items[j+1] = tmp; //Replace adjacent number with current number
+          var tmp = items[i];  //Temporary variable to hold the current number
+          items[i] = items[i+1]; //Replace current number with adjacent number
+          items[i+1] = tmp; //Replace adjacent number with current number
         }
       }        
-    }
     return items.join(',')
   }
 
